@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome! My name is Eli Sandler."
+title: "Welcome! My name is Eli Sandler." <span style="color:red;">This text is red.</span>
 excerpt: "About me"
 author_profile: true
 redirect_from: 
