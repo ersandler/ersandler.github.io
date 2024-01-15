@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-<a href="../files/resume.pdf" target="_blank">Download PDF</a>
+<a href="/../files/resume.pdf" target="_blank">Download PDF</a>
