@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-{% include_relative files/resume.pdf %}
+{% include_relative /files/resume.pdf %}
