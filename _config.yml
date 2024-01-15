@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Elijah Sandler Personal Site"
+title                    : "Elijah Sandler"
 title_separator          : "-"
 name                     : &name "Elijah Sandler"
 description              : &description "A personal site to house my portfolio during a co-op search"
