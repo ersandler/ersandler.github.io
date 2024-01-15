@@ -18,7 +18,7 @@ main:
     url: /resume/
 
   - title: "Personal"
-    urll: /personal/
+    url: /personal/
     
   # - title: "Guide"
   #   url: /markdown/
