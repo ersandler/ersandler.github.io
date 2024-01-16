@@ -8,7 +8,52 @@ author_profile: true
 {% include base_path %}
 
 
-{% for post in site.portfolio %}
+<!-- {% for post in site.portfolio %}
   {% include archive-single.html %}
-{% endfor %}
+{% endfor %} -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+</head>
+
+<body>
+
+    <div style="display: flex; justify-content: space-between;">
+
+        <!-- Module 1 -->
+        <div style="flex: 1; margin-right: 10px;">
+            <a href="your_link1.html">
+                <img src="your_image1.jpg" alt="Project 1">
+            </a>
+            <h3>Project 1</h3>
+            <p>Short description for Project 1.</p>
+        </div>
+
+        <!-- Module 2 -->
+        <div style="flex: 1; margin-right: 10px;">
+            <a href="your_link2.html">
+                <img src="your_image2.jpg" alt="Project 2">
+            </a>
+            <h3>Project 2</h3>
+            <p>Short description for Project 2.</p>
+        </div>
+
+        <!-- Module 3 -->
+        <div style="flex: 1;">
+            <a href="your_link3.html">
+                <img src="your_image3.jpg" alt="Project 3">
+            </a>
+            <h3>Project 3</h3>
+            <p>Short description for Project 3.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
