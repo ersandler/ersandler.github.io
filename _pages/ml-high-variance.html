@@ -17,6 +17,11 @@ The next step was to create a metric to optimize for. Fantasy Football Hub's exp
   </p>
 
   <div style="text-align: center;">
-    <img src="/images/fpl-graph.jpg" width=50 style="display: block; margin: 0 auto;">
+    <img src="/images/fpl-graph.jpg" width=600 style="display: block; margin: 0 auto;">
   </div>
+
+  <p>
+Above is all forwards with at least 450 minutes played as of 1/10/2024, graphed by their average points per game and their overachievement metric. The size of a point indicates their price in FPL, which isn't relevant for the analysis but is relevant if you're hunting for the best 5.5mil forward, and this project is meant to be practical. The dark green arrow indicates a line of best fit for the majority of the data. The interesting arrow is the light green one, which points to the dot representing Aston Villa striker Ollie Watkins. Watkins is notable because he is the first player in which I observed the "Ollie Watkins Effect," where we can predict a player's regression to the mean based on their points per game and overachievement scores. At the beginning of the season, Watkins was located at the tail of the arrow, with a surprisingly high points tally given how rarely he overachieved. Over the course of the season, he has scored fewer points per game, <i>even though he has overachieved more often</i>. This seemingly bizarre occurrence was not an isolated event. Solly March, Heung Min Son, and half a dozen other outliers have shown this movement over the course of the season. Based on this, I made two predictions, corresponding to the orange arrows on the graph. Time will tell how accurate the Ollie Watkins Effect is at predictions.<br>
+The code for the overachievement metric, the solver, and several related functions are in this GitHub repository. 
+  </p>
 </div>
