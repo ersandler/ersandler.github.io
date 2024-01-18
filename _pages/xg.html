@@ -7,3 +7,58 @@ author_profile: true
 
 {% include base_path %}
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Academic Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        .content-container {
+            display: flex;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .images {
+            flex: 1;
+            text-align: right;
+        }
+
+        .images img {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .images p {
+          font-size: 12px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="text">
+            <p>Your text goes here. It will start in the top left and wrap around the images on the right.</p>
+        </div>
+        <div class="images">
+            <img src="/images/xg-ind.png">
+            <img src="/images/constant-variance.png">
+            <img src="/images/all-szn-qq.png">
+            <p>Quantile-quantile plot for xG vs Goals Scored for Premier League games (2018-2024)</p>
+            <img src="/images/1-szn-qq.png">
+            <p>Quantile-quantile plot for xG vs Goals Scored for Premier League games (2023-2024)</p>
+        </div>
+    </div>
+</body>
+
+</html>
