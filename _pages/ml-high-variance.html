@@ -1,0 +1,19 @@
+---
+layout: archive
+title: "Machine Learning with High Variance"
+permalink: /projects/ml-with-high-variance/
+author_profile: true
+---
+
+{% include base_path %}
+
+<div class="project-description">
+  
+  <h3>11 million people play Fantasy Premier League, and none of them are having any fun.</h3>
+  <p>
+The second half of that sentence is probably hyperbole, but not by much. FPL, as it's known, is notorious for its <i>high variance of results</i>: the difference between a great week and a terrible one can be dictated by a blade of grass. There are plenty of sites on the internet that use complicated algorithms to predict how players will perform week by week, but they aren't particularly reliable. For example, Fantasy Football Hub predicts that Arsenal's Bukayo Saka will score 5.9, 6.1, and 5.9 points in his next three matchweeks. Arsenal play away from home on both matchweeks where Saka is predicted to score 5.9 points, and at home when he is predicted to score 6.1. Tottenham's Richarlison is predicted to score 5.1 points when his team play at home, and 4.7 when his team play away. Is it possible that the only major factor in how well a fantasy asset does is whether or not he's playing at home? It seems unlikely.<br>
+Northeastern University offers <a href=https://undergraduate.northeastern.edu/research/awards/peak-awards-overview/>Project-Based Exploration for the Advancement of Knowledge (PEAK)</a> awards in order to enable students to conduct their own research and fund their independent, academic-adjacent projects. In the Fall of 2023, I applied for, and won, a PEAK Ascent Award to research machine learning methods in cases with high variance in results, using Fantasy Premier League as a case study.<br>
+The project thus far has had two stages: creating the solver, and creating the optimizations metrics. Creating the solver was simple in theory, but more complex in execution. Basically, the goal was to get the program to recognize the limits of FPL's transfer. You must have a certain number of each position, stay below a given budget, and cannot have too many players from the same team. Additionally, you must designate some players to be "benched" (those players don't get any points unless one of your starters does not player), and one player to be "captain" (this player gets double points). The solver is simply a function that uses Python's <a href=https://pypi.org/project/PuLP/>PuLP</a> library for linear programming to recognize these limitations and optimize for some numerical variable. Once run, the functions returns a valid FPL team, including denoting starters, ordered bench players, and captain.<br>
+The next step was to create a metric to optimize for. Fantasy Football Hub's expected points, referenced above, could be one such metric, but after initially tests, I remain skeptical of its accuracy. Instead, I created a metric called "overachievement," which is defined as the percentage of games in which a player does better than the average asset in its positions. We calculate the average asset value by taking the average points per week of a player, then scaling by its ownership. The more owned a player is, the more we want to beat them, so the more weight they have in the average. A full team of players who perform above average more than 50% of the time would be definition be an above average team. 
+  </p>
+</div>
