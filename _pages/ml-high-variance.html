@@ -15,8 +15,8 @@ Northeastern University offers <a href=https://undergraduate.northeastern.edu/re
 The project thus far has had two stages: creating the solver, and creating the optimizations metrics. Creating the solver was simple in theory, but more complex in execution. Basically, the goal was to get the program to recognize the limits of FPL's transfer. You must have a certain number of each position, stay below a given budget, and cannot have too many players from the same team. Additionally, you must designate some players to be "benched" (those players don't get any points unless one of your starters does not player), and one player to be "captain" (this player gets double points). The solver is simply a function that uses Python's <a href=https://pypi.org/project/PuLP/>PuLP</a> library for linear programming to recognize these limitations and optimize for some numerical variable. Once run, the functions returns a valid FPL team, including denoting starters, ordered bench players, and captain.<br>
 The next step was to create a metric to optimize for. Fantasy Football Hub's expected points, referenced above, could be one such metric, but after initially tests, I remain skeptical of its accuracy. Instead, I created a metric called "overachievement," which is defined as the percentage of games in which a player does better than the average asset in its positions. We calculate the average asset value by taking the average points per week of a player, then scaling by its ownership. The more owned a player is, the more we want to beat them, so the more weight they have in the average. A full team of players who perform above average more than 50% of the time would be definition be an above average team. 
   </p>
-</div>
 
-<div style="text-align: center;">
-  <img src="/images/fpl-graph.jpg" style="display: block; margin: 0 auto;">
+  <div style="text-align: center;">
+    <img src="/images/fpl-graph.jpg" width=1000 style="display: block; margin: 0 auto;">
+  </div>
 </div>
