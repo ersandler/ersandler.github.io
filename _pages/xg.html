@@ -48,7 +48,14 @@ author_profile: true
 <body>
     <div class="content-container">
         <div class="text">
-            <p>Your text goes here. It will start in the top left and wrap around the images on the right.</p>
+            <h3>Expected goals are a big deal.</h3>
+            <p> 
+<a href=https://twitter.com/xGPhilosophy>xG Philosophy</a> has nearly half a million followers on Twitter/X, and all they do is post the expected goals statistics from a few games every week. Football fans are obsessed with xG, but just how accurate is it?<br>
+Expected goals (xG) is a football statistic that estimates the probability that a shot goes in to the goal. xG models vary, but the most modern models will include factors like type of shot (e.g. header), location on the pitch, and the position of nearby defenders. Each shot is assigned a value between 0 and 1, inclusive. A penalty kick is generally considered to be worth about .76 xG, which suggests a penalty conversion rate of 76%.<br>
+In a machine learning sense, xG is the one and only feature of a linear regression predicting goals scored. That means we can run tests for independence, constant variance, and normality of the residuals, which are our assumptions for a linear regression. After conducting said tests, I concluded that the assumptions are not all valid in this case, and that xG, especially when used in small sample sizes, can be misleading.<br>
+These graphs are compiled from <a href=https://fbref.com/en/>FBref's</a> database of Premier League scores and xG that dates back to 2018. The first two plots check that the residuals are independent from the order in which the games occurred, and the amount of xG that occurred in each game. We do this to be sure that there are no patterns lurking in our data that would make the data unfit for linear regression. The plot checking for independence looks good, with no patterns and a random distribution of points throughout. This may not be the case with the constant variance plot, however, which shows clear patterns that correspond to the number of goals scored in a game. These patterns occur because xG is a continuous variable predicting a discrete variable, which can cause problems. Our final graph is a quantile-quantile graph, which checks that the residuals follow a normal distrbution. Since the blue points trail decisively off the red line on the upper end of the graph, we can conclude that xG may not be reliable for games that have high xG. This is compounded when working with a smaller dataset, as shown by the second q-q plot, which only features data from half a season. 
+            
+            </p>
         </div>
         <div class="images">
             <img src="/images/xg-ind.png">
@@ -57,6 +64,8 @@ author_profile: true
             <p>Quantile-quantile plot for xG vs Goals Scored for Premier League games (2018-2024)</p>
             <img src="/images/1-szn-qq.png">
             <p>Quantile-quantile plot for xG vs Goals Scored for Premier League games (2023-2024)</p>
+            <img src="/images/xg-gs.png">
+            <p>Chart showing relationship between xG produced and average goals scored in the Premier Leafue (2023-2024)</p>
         </div>
     </div>
 </body>
