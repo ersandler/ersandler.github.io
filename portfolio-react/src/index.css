@@ -1,0 +1,17 @@
+/* Tailwind v4 - single import statement replaces the three @tailwind directives */
+@import "tailwindcss";
+
+/* Custom theme configuration for Tailwind v4 */
+@theme {
+  /* Custom color palette - New England fall theme */
+  --color-conifer: #2d5016;     /* Dark green for links, headings, active nav */
+  --color-rust: #c2410c;        /* Orange for hovers, accents, CTAs */
+  --color-light-grey: #f5f5f5;  /* Page background */
+  --color-charcoal: #374151;    /* Body text */
+}
+
+/* Better text rendering on macOS/iOS */
+body {
+  -webkit-font-smoothing: antialiased; /* macOS/iOS */
+  -moz-osx-font-smoothing: grayscale;  /* Firefox on macOS */
+}
