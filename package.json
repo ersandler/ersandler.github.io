@@ -1,33 +1,36 @@
 {
-  "name": "minimal-mistakes",
-  "version": "3.4.2",
-  "description": "Minimal Mistakes Jekyll theme npm build scripts",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mmistakes/minimal-mistakes.git"
+  "name": "portfolio-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "keywords": [
-    "jekyll",
-    "theme",
-    "minimal"
-  ],
-  "author": "Michael Rose",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
-  },
-  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
-  "engines": {
-    "node": ">= 0.10.0"
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
-    "npm-run-all": "^1.7.0",
-    "onchange": "^2.2.0",
-    "uglify-js": "^2.6.1"
-  },
-  "scripts": {
-    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/plugins/stickyfill.min.js assets/js/_main.js -c -m -o assets/js/main.min.js",
-    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
-    "build:js": "npm run uglify"
+    "@eslint/js": "^9.36.0",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.4.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14",
+    "vite": "^7.1.7"
   }
 }
