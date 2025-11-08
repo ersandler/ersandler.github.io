@@ -19,7 +19,7 @@ function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {projects.map(project => (
           <Link
             key={project.id}
@@ -27,7 +27,7 @@ function Projects() {
             className={`group block bg-white rounded-lg overflow-hidden transition-all ${
               project.featured
                 ? 'border-2 border-conifer hover:border-rust'
-                : 'border border-gray-200 hover:border-gray-300'
+                : 'border-2 border-gray-300 hover:border-gray-400'
             } hover:shadow-lg`}
           >
             {/* Project Image - only show if image exists */}
@@ -56,18 +56,18 @@ function Projects() {
               </p>
 
               {/* Tags */}
-              {project.tags && project.tags.length > 0 && (
+              {/* {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-xs px-2 py-1 bg-gray-100 text-charcoal rounded"
+                      className="text-xs px-2 py-1 bg-gray-100 text-charcoal rounded border border-gray-300"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           </Link>
         ))}

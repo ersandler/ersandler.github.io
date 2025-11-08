@@ -10,6 +10,7 @@ import Projects from './pages/Projects'
 import ProjectDetail from './pages/ProjectDetail'
 import Personal from './pages/Personal'
 import Monologue from './pages/Monologue'
+import MonologueDetail from './pages/MonologueDetail'
 
 function App() {
   return (
@@ -31,8 +32,11 @@ function App() {
           {/* Personal/About page */}
           <Route path="/personal" element={<Personal />} />
 
-          {/* Monologue/Blog page - Phase 2 */}
+          {/* Monologue/Blog listing page */}
           <Route path="/monologue" element={<Monologue />} />
+
+          {/* Individual monologue detail pages */}
+          <Route path="/monologue/:id" element={<MonologueDetail />} />
         </Routes>
       </Layout>
     </BrowserRouter>

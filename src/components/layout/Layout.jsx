@@ -5,7 +5,6 @@
  */
 
 import Sidebar from './Sidebar';
-import SidebarFooter from './SidebarFooter';
 import Header from './Header';
 
 function Layout({ children }) {
@@ -17,11 +16,11 @@ function Layout({ children }) {
       <div className="h-2 bg-conifer"></div>
 
       {/* Flex container for sidebar + content area */}
-      {/* On mobile: stack vertically (flex-col) */}
+      {/* On mobile: stack vertically with sidebar at bottom (flex-col-reverse) */}
       {/* On desktop (lg breakpoint): side-by-side (lg:flex-row) */}
-      <div className="flex flex-col lg:flex-row flex-1">
+      <div className="flex flex-col-reverse lg:flex-row flex-1">
 
-        {/* Sidebar - will be full width on mobile, fixed width on desktop */}
+        {/* Sidebar - at bottom on mobile, left side on desktop */}
         <Sidebar />
 
         {/* Main content area - takes remaining space */}
@@ -31,16 +30,13 @@ function Layout({ children }) {
           <Header />
 
           {/* Page content - this is where children (page components) are rendered */}
-          <main className="flex-1 p-8">
-            {children}
+          <main className="flex-1 p-8 flex justify-center">
+            <div className="w-full max-w-3xl">
+              {children}
+            </div>
           </main>
 
         </div>
-      </div>
-
-      {/* Footer for mobile - shown at bottom of page */}
-      <div className="lg:hidden bg-white border-t border-gray-200 py-6">
-        <SidebarFooter />
       </div>
     </div>
   );

@@ -10,21 +10,22 @@ import SidebarFooter from './SidebarFooter';
 
 function Sidebar() {
   return (
-    // Sidebar container - white background, full height, padding
+    // Sidebar container - white background, padding
     // On mobile: full width. On desktop (lg breakpoint): fixed width sidebar
     // border-r adds light gray line on right side to separate from content
-    // flex flex-col allows footer content to stick to bottom with mt-auto
-    <aside className="bg-white p-8 lg:w-80 lg:min-h-screen border-r border-gray-200 flex flex-col">
+    // min-h-screen ensures sidebar is tall enough for footer to be visible when scrolling
+    <aside className="bg-white p-8 lg:w-70 border-r border-gray-200 lg:min-h-screen flex flex-col">
 
-      <SidebarProfile />
-
-      {/* Spacer to push footer to bottom on desktop */}
-      <div className="flex-grow"></div>
-
-      {/* Footer - only shown on desktop */}
-      <div className="hidden lg:block">
-        <SidebarFooter />
+      {/* Container for sticky profile - limits how far it can stick */}
+      <div className="flex-grow">
+        {/* Profile section - sticky on desktop so it stays visible while scrolling */}
+        <div className="lg:sticky lg:top-0 lg:bg-white lg:pb-8">
+          <SidebarProfile />
+        </div>
       </div>
+
+      {/* Footer - shown on all screen sizes */}
+      <SidebarFooter />
     </aside>
   );
 }

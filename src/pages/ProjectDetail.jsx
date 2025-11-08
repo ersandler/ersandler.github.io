@@ -4,11 +4,17 @@
  */
 
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { projects } from '../data/projectsData';
 
 function ProjectDetail() {
   const { id } = useParams();
   const project = projects.find(p => p.id === id);
+
+  // Scroll to top when component mounts or project changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   // If project not found, show error
   if (!project) {
@@ -44,7 +50,7 @@ function ProjectDetail() {
               {project.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="text-xs px-2 py-1 bg-gray-100 text-charcoal rounded"
+                  className="text-xs px-2 py-1 bg-gray-100 text-charcoal rounded border border-gray-300"
                 >
                   {tag}
                 </span>
