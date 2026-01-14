@@ -55,12 +55,12 @@ function Header() {
           About Me
         </NavLink>
 
-        <div className="hidden md:block h-6 w-px bg-gray-300"></div>
+        {/* <div className="hidden md:block h-6 w-px bg-gray-300"></div> */}
 
         {/* Monologue link - Phase 2 */}
-        <NavLink to="/monologue" className={getLinkClasses}>
+        {/* <NavLink to="/monologue" className={getLinkClasses}>
           Monologue
-        </NavLink>
+        </NavLink> */}
 
       </nav>
     </header>

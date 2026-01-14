@@ -77,10 +77,10 @@ function Home() {
 
           </p>
           <p>
-            As a hobby, I've also spent some time analyzing sports data and using those analyses to build predictive models. This has generated some interesting conclusions about things like predicting NBA games and what makes for a good Fantasy Premier League asset.  
+            As a hobby, I've also spent some time analyzing sports data and using those analyses to build predictive models. This has generated some interesting conclusions about things like predicting NBA champions and what makes for a good Fantasy Premier League asset.  
           </p>
           <p>
-            This site contains several of the projects I have worked on the past four years, including or explanations of them. Please feel free to reach out if you'd like to chat about anything related to what you see here!
+            This site contains several of the projects I have worked on the past four years, including source code and project write-ups. Please feel free to reach out if you'd like to chat about anything related to what you see here!
           </p>
         </div>
       </section>
@@ -129,7 +129,7 @@ function Home() {
             <div className="mt-6 flex items-center justify-center gap-4">
               <button
                 onClick={goToPrevPage}
-                className="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors cursor-pointer"
                 aria-label="Previous projects"
               >
                 <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -143,7 +143,7 @@ function Home() {
                   <button
                     key={index}
                     onClick={() => goToPage(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
+                    className={`w-2 h-2 rounded-full transition-colors cursor-pointer ${
                       index === currentPage ? 'bg-conifer' : 'bg-gray-300'
                     }`}
                     aria-label={`Go to page ${index + 1}`}
@@ -153,7 +153,7 @@ function Home() {
 
               <button
                 onClick={goToNextPage}
-                className="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors cursor-pointer"
                 aria-label="Next projects"
               >
                 <svg className="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,7 +176,7 @@ function Home() {
       )}
 
       {/* Latest Monologue Section */}
-      <section className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+      {/* <section className="bg-gray-50 border border-gray-200 rounded-lg p-6">
         <h2 className="text-2xl font-bold text-conifer mb-3">Latest Thoughts</h2>
         <p className="text-charcoal mb-4">
           Check out my latest reflections and musings on philosophy, data science, and more.
@@ -187,7 +187,7 @@ function Home() {
         >
           Read the Monologue →
         </Link>
-      </section>
+      </section> */}
     </div>
   );
 }

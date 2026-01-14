@@ -16,7 +16,9 @@ function Personal() {
         {/* Text content */}
         <div className="flex-1 space-y-4 text-charcoal leading-relaxed">
           <p>
-            Outside of education, I have a wide variety of interests and hobbies about which I'm very passionate. I'm a massive Arsenal fan, and also support Williams F1, Indiana University basketball, and the Boston Celtics. I play chess, both online and over the board, and particularly enjoy playing tactical open positions. I also recently took up fencing! I love hiking and the outdoors, and one of my biggest goals for the next year is to spend more time outside, in nature, in the mountains. I'm an avid reader, especially of well-written and intricate fantasy. I also have an inexplicable fascination with urban planning, which manifests in my unconditional hatred of cloverleaf interchanges.
+            Outside of education, I have a wide variety of interests and hobbies about which I'm <i>very</i> passionate. I'm a massive Arsenal fan, and I also love Indiana University basketball and the Boston Celtics. I've gotten big into Indycar over the past couple of years, and one of my favorite days of my life was the one I spent at Road America. 
+            
+            I also play chess, both online and over the board, and particularly enjoy playing tactical open positions. I also recently took up fencing! I love hiking and the outdoors, and spent many days in the Blue Mountains during my time in Sydney. I'm an avid reader, especially of well-written and intricate fantasy, such as Joe Abercrombie. I also have an inexplicable fascination with urban planning, which manifests in my unconditional hatred of cloverleaf interchanges.
           </p>
           <p>
             Pictured are me and my dog Pearl, the winner of the{' '}

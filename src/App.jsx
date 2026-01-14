@@ -32,8 +32,8 @@ function App() {
           {/* Personal/About page */}
           <Route path="/personal" element={<Personal />} />
 
-          {/* Monologue/Blog listing page */}
-          <Route path="/monologue" element={<Monologue />} />
+          {/* Monologue/Blog listing page
+          <Route path="/monologue" element={<Monologue />} /> */}
 
           {/* Individual monologue detail pages */}
           <Route path="/monologue/:id" element={<MonologueDetail />} />
